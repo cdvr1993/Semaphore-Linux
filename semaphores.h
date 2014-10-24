@@ -5,8 +5,6 @@
 #include <sys/sem.h>
 #include <unistd.h>
 
-#define CICLOS 10
-
 void seminit(int *idsem, int val);
 void semwait(int idsem);
 void semsignal(int idsem);

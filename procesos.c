@@ -33,6 +33,10 @@ int main() {
 	for(i=0;i<3;i++)
 		pid = wait(&status);
 
+	#ifndef SEMAFOROS
+		msgctl(idsem, IPC_RMID, NULL);
+	#endif
+
 	return 0;
 }
 
@@ -45,7 +49,6 @@ void proceso(int i) {
 		#ifdef SEMAFOROS
 			semwait(idsem);
 		#else
-			printf("Before Wait\n");
 			queuewait(idsem);
 		#endif
 		printf("Entra %s ", pais[i]);

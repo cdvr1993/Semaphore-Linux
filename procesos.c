@@ -34,6 +34,7 @@ int main() {
 		pid = wait(&status);
 
 	#ifndef SEMAFOROS
+		// Eliminamos la cola de mensajes
 		msgctl(idsem, IPC_RMID, NULL);
 	#endif
 

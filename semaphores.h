@@ -5,6 +5,7 @@
 #include <sys/sem.h>
 #include <unistd.h>
 
+// Prototipos usados en la implementación de semáforos
 void seminit(int *idsem, int val);
 void semwait(int idsem);
 void semsignal(int idsem);

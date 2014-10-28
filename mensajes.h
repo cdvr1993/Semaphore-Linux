@@ -5,7 +5,7 @@
 #include <sys/ipc.h>
 #include <sys/msg.h>
 
-
+// Prototipos usados en la implementación de cola de mensajes
 void queueinit(int *idqueue);
 void queuewait(int idqueue);
 void queuesignal(int idqueue);
